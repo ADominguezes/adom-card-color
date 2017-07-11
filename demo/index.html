@@ -18,10 +18,8 @@
 
   <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
   <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-  <link rel="import" href="../../paper-input/paper-input.html">
-  <link rel="import" href="../../paper-swatch-picker/paper-swatch-picker.html">
   <link rel="import" href="../../iron-icons/iron-icons.html">
-  <link rel="import" href="../../adom-demo/adom-demo.html">
+  <link rel="import" href="../../adom-demo-properties/adom-demo-properties.html">
   <link rel="import" href="../adom-card-color.html">
 
   <style is="custom-style" include="demo-pages-shared-styles">
@@ -36,42 +34,11 @@
 </head>
 
 <body>
-  <adom-demo id="demo" option-selected="0" hide-menu>
-    <div id="view0" data-heading="Hello World" data-description="this is a reserved space for a description">
+  <adom-demo-properties id="demo" option-selected="0" component-name="adom-card-color" properties-setted='[{"label": "color", "value": "#65a5f2", "color": "#65a5f2"}, {"label": "heading", "value": "title"}, {"label": "description", "value": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet maiores dolorum illum facilis harum delectus nesciunt. Veritatis voluptate nesciunt, inventore, accusamus quibusdam et necessitatibus magni qui repudiandae doloribus rem, laborum."}, {"label": "counter", "value": "4", "type": "number"}, {"label": "units", "value": "components"}, {"label": "aria-heading-level", "value": "2"}, {"label": "icon", "selected": "0", "list": [{"value":"icons:view-module"}, {"value": "icons:view-carousel"}, {"value": "icons:touch-app"}, {"value": "icons:today"}]}, {"label": "collapsed", "selected": "0", "list": [{"value":"false"}, {"value": "true"}]}]'>
+    <demo-snippet id="view0" data-heading="Hello World" data-description="this is a reserved space for a description">
       <template is="dom-bind" id="template0">
-        <style is="custom-style">
-          .flex {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -10px;
-          }
-          paper-input, paper-swatch-picker {
-            margin-right: 20px;
-          }
-        </style>
-        <div class="flex">
-          <paper-swatch-picker slot="prefix" column-count=5 color="{{color}}" color-list='["#65a5f2", "#83be54", "#f0d551", "#e5943c", "#a96ddb"]'></paper-swatch-picker>
-          <paper-input label="color" value="{{color}}">
-          </paper-input>
-          <paper-input label="heading" value="{{heading}}"></paper-input>
-          <paper-input label="icon" value="{{icon}}"></paper-input>
-          <paper-input label="counter" type="number" value="{{counter}}"></paper-input>
-          <paper-input label="units" value="{{units}}"></paper-input>
-        </div>
-        <adom-card-color color="[[color]]" heading="[[heading]]" icon="[[icon]]" counter="[[counter]]" units="[[units]]" description="[[description]]"></adom-card-color>
-        <script>
-          (function(demo) {
-            demo.color = "#83be54";
-            demo.heading = "Título";
-            demo.description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et alias at, ut sit qui, consequatur reprehenderit ipsum commodi! Voluptatem alias temporibus quod consectetur, quae porro, deserunt unde adipisci illo mollitia.";
-            demo.icon = "icons:view-module";
-            demo.counter = "4";
-            demo.units = "components"
-            demo.icon = "icons:view-module";
-          }(document.querySelector('#template0')))
-        </script>
       </template>
-    </div>
+    </demo-snippet>
   </adom-demo>
 </body>
 
