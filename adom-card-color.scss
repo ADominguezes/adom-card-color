@@ -9,27 +9,25 @@
   color: var(--adom-card-color-color, #fff);
   border: 1px solid #d7dfe3;
   border-radius: 4px;
+  position: relative;
   @apply(--adom-card-color);
 }
+
 .header {
   display: flex;
   padding: 1.25em;
+  @apply(--adom-card-color-header);
   &__icon {
     margin-right: 20px;
     align-self: center;
     --iron-icon-height: 64px;
     --iron-icon-width: 64px;
+    @apply(--adom-card-color-header-icon);
   }
   &__heading {
     padding-top: 10px;
     font-size: 22px;
-    &__subheading {
-      padding: 0;
-      font-size: 14px;
-      font-weight: lighter;
-      line-height: 0;
-      color: rgba(255, 255, 255, 0.65);
-    }
+    @apply(--adom-card-color-header-heading);
   }
 }
 
@@ -37,11 +35,28 @@
   display: flex;
   padding: 1.25em;
   font-weight: lighter;
+  transition: all 2s;
+  @apply(--adom-card-color-body);
   &__counter {
     font-size: 22px;
     min-width: 200px;
+    @apply(--adom-card-color-body-counter);
   }
-  &__description {
+}
 
+:host([collapsed]) {
+  .body {
+    position: absolute;
+    top: 0;
+    transition: all 2s;
+    @apply(--adom-card-color-body-collapsed);
+    &__counter {
+      transform: translate(85px, 37px);
+      font-size: 14px;
+      font-weight: lighter;
+      height: 40px;
+      color: rgba(255, 255, 255, 0.65);
+      @apply(--adom-card-color-body-collapsed-counter);
+    }
   }
 }

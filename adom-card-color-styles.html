@@ -9,37 +9,51 @@
   color: var(--adom-card-color-color, #fff);
   border: 1px solid #d7dfe3;
   border-radius: 4px;
+  position: relative;
   @apply (--adom-card-color); }
 
 .header {
   display: -ms-flexbox;
   display: flex;
-  padding: 1.25em; }
+  padding: 1.25em;
+  @apply (--adom-card-color-header); }
   .header__icon {
     margin-right: 20px;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
     --iron-icon-height: 64px;
-    --iron-icon-width: 64px; }
+    --iron-icon-width: 64px;
+    @apply (--adom-card-color-header-icon); }
   .header__heading {
     padding-top: 10px;
-    font-size: 22px; }
-    .header__heading__subheading {
-      padding: 0;
-      font-size: 14px;
-      font-weight: lighter;
-      line-height: 0;
-      color: rgba(255, 255, 255, 0.65); }
+    font-size: 22px;
+    @apply (--adom-card-color-header-heading); }
 
 .body {
   display: -ms-flexbox;
   display: flex;
   padding: 1.25em;
-  font-weight: lighter; }
+  font-weight: lighter;
+  transition: all 2s;
+  @apply (--adom-card-color-body); }
   .body__counter {
     font-size: 22px;
-    min-width: 200px; }
+    min-width: 200px;
+    @apply (--adom-card-color-body-counter); }
+
+:host([collapsed]) .body {
+  position: absolute;
+  top: 0;
+  transition: all 2s;
+  @apply (--adom-card-color-body-collapsed); }
+  :host([collapsed]) .body__counter {
+    transform: translate(85px, 37px);
+    font-size: 14px;
+    font-weight: lighter;
+    height: 40px;
+    color: rgba(255, 255, 255, 0.65);
+    @apply (--adom-card-color-body-collapsed-counter); }
 
 </style>
 </template>
