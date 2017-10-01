@@ -16,15 +16,16 @@
     }
   </script>
 
-  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
   <link rel="import" href="../../iron-icons/iron-icons.html">
-  <link rel="import" href="../../adom-demo-properties/adom-demo-properties.html">
+  <link rel="import" href="../../adom-demo-helper-properties/adom-demo-helper-properties.html">
+  <link rel="import" href="../../adom-demo-marked/adom-demo-marked.html">
   <link rel="import" href="../adom-card-color.html">
 
   <style is="custom-style" include="demo-pages-shared-styles">
     /*Common styles*/
-
+    body {
+      margin: 0;
+    }
     demo-snippet {
       --demo-snippet-demo: {
         display: block;
@@ -34,12 +35,12 @@
 </head>
 
 <body>
-  <adom-demo-properties id="demo" option-selected="0" component-name="adom-card-color" properties-setted='[{"label": "color", "value": "#65a5f2", "color": "#65a5f2"}, {"label": "heading", "value": "title"}, {"label": "description", "value": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet maiores dolorum illum facilis harum delectus nesciunt. Veritatis voluptate nesciunt, inventore, accusamus quibusdam et necessitatibus magni qui repudiandae doloribus rem, laborum."}, {"label": "counter", "value": "4", "type": "number"}, {"label": "units", "value": "components"}, {"label": "aria-heading-level", "value": "2"}, {"label": "icon", "selected": "0", "list": [{"value":"icons:view-module"}, {"value": "icons:view-carousel"}, {"value": "icons:touch-app"}, {"value": "icons:today"}]}, {"label": "collapsed", "selected": "0", "list": [{"value":"false"}, {"value": "true"}]}]'>
-    <demo-snippet id="view0" data-heading="Hello World" data-description="this is a reserved space for a description">
-      <template is="dom-bind" id="template0">
+  <adom-demo-helper-properties id="demo" toast-events='["adom-card-color-reset"]' component-name="adom-card-color" properties-setted='[{"label": "color", "value": "#65a5f2", "color": "#65a5f2"}, {"label": "heading", "value": "title"}, {"label": "description", "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus, libero eu condimentum congue, eros nisi dictum nibh, et lobortis felis justo nec quam. Suspendisse condimentum fermentum efficitur. Integer ut ipsum tortor. Morbi nec consequat metus. Quisque pharetra efficitur erat. Donec aliquam tellus mollis est ultrices rutrum. Donec sem magna, ultricies a tempor id, scelerisque at neque. Ut quis leo felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus, libero eu condimentum congue, eros nisi dictum nibh, et lobortis felis justo nec quam. Suspendisse condimentum fermentum efficitur. Integer ut ipsum tortor. Morbi nec consequat metus. Quisque pharetra efficitur erat. Donec aliquam tellus mollis est ultrices rutrum. Donec sem magna, ultricies a tempor id, scelerisque at neque. Ut quis leo felis."}, {"label": "counter", "value": "4", "type": "number"}, {"label": "units", "value": "components"}, {"label": "icon", "selected": "0", "list": [{"value":"icons:view-module"}, {"value": "icons:view-carousel"}, {"value": "icons:touch-app"}, {"value": "icons:today"}]}, {"label": "collapsed", "selected": "0", "list": [{"value": "false"}, {"value": "true"}]}]' methods='["reset"]'>
+    <adom-demo-marked id="view0" data-heading="Adom card color" data-description="This is a reserved space for a description or a note about the component (e.g. the var --adom-card-color-bg-color is changed with the property color of the component)">
+      <template is="dom-bind">
       </template>
-    </demo-snippet>
-  </adom-demo>
+    </adom-demo-marked>
+  </adom-demo-helper-properties>
 </body>
 
 </html>
