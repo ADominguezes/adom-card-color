@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "description": "This component shows a box with information inside",
   "main": "adom-card-color.html",
-  "keywords": [],
+  "keywords": [
+    "card",
+    "color"
+  ],
+  "library": "Polymer 1",
   "ignore": [],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.8.0",
