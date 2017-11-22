@@ -13,6 +13,23 @@
         value: 'title'
       },
       /**
+       * Set an array with label
+       */
+      label: {
+        type: Array,
+        value: function() {
+          return []
+        }
+      },
+      /**
+       * image of component
+       */
+      img: {
+        type: String,
+        value: null,
+        observer: '_setImg'
+      },
+      /**
        * set a description in the card
        */
       description: {
@@ -28,25 +45,18 @@
         observer: '_setColor'
       },
       /**
-       * set the icon of the card
+       * Name of webcomponent to show in .ribbon
        */
-      icon: {
+      webcomponent: {
         type: String,
         value: null
       },
       /**
-       * Number of items
+       * if it´s true the footer is hidden
        */
-      counter: {
-        type: Number,
-        value: null
-      },
-      /**
-       * Number of units
-       */
-      units: {
-        type: String,
-        value: null
+      noFooter: {
+        type: Boolean,
+        value: false
       },
       /**
        * level of heading
@@ -71,15 +81,38 @@
         heading.removeAttribute('aria-level');
       }
     },
+    _setImg: function (newVal) {
+      if(!newVal) {
+        this.img = 'https://basepublica.org/img/avatar_placeholder.png';
+      }
+    },
     _setColor: function() {
       this.customStyle['--adom-card-color-bg-color'] = this.color;
       this.updateStyles();
     },
     /**
-     * Reset component
+     * set Demo
      */
-    reset: function() {
-      this.dispatchEvent(new CustomEvent('adom-card-color-reset', {
+    _setDemo: function() {
+      this.dispatchEvent(new CustomEvent('adom-card-color-demo', {
+        bubbles: true,
+        composed: true
+      }));
+    },
+    /**
+     * set Demo
+     */
+    _setDocumentation: function() {
+      this.dispatchEvent(new CustomEvent('adom-card-color-documentation', {
+        bubbles: true,
+        composed: true
+      }));
+    },
+    /**
+     * set Demo
+     */
+    _setResource: function() {
+      this.dispatchEvent(new CustomEvent('adom-card-color-resource', {
         bubbles: true,
         composed: true
       }));
