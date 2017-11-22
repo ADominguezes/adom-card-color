@@ -56,7 +56,7 @@ gulp.task('styles-replace', ['styles'], function () {
 gulp.task('serve', ['styles-replace', 'styles', 'watch'], function () {
   var mw = [
     function (req, res, next) {
-      if ((req.url.indexOf('/bower_components') !== 0) && (req.url !== '/') && (req.url !== '/demo/index.html') && (req.url !== '/adom-card-color.html') && (req.url !== '/adom-card-color.js') && (req.url !== '/adom-card-color-styles.html')) {
+      if ((req.url.indexOf('/bower_components') !== 0) && (req.url !== '/') && (req.url !== '/demo/index.html') && (req.url !== '/test/index.html') && (req.url !== '/test/basic-test.html') && (req.url !== '/adom-card-color.html') && (req.url !== '/adom-card-color.js') && (req.url !== '/adom-card-color-styles.html')) {
         req.url = 'bower_components' + req.url;
       }
       return superstatic({
@@ -69,7 +69,7 @@ gulp.task('serve', ['styles-replace', 'styles', 'watch'], function () {
   ];
   browserSync.init({
     injectChanges: true,
-    files: ['./*.{html, scss}', './demo/index.html', './adom-card-color.js', './dist/css/adom-card-color.css'],
+    files: ['./*.{html, scss}', './demo/index.html', './test/index.html', './test/basic-test.html', './adom-card-color.js', './dist/css/adom-card-color.css'],
     notify: true,
     server: {
       baseDir: "./",
