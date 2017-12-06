@@ -77,6 +77,7 @@ gulp.task('serve', ['polymer-analyze', 'styles-replace', 'styles', 'watch'], fun
     injectChanges: true,
     files: ['./*.{html, scss}', './demo/index.html', './test/index.html', './test/basic-test.html', './adom-card-color.js', './dist/css/adom-card-color.css'],
     notify: true,
+    startPath: '/demo/index.html',
     server: {
       baseDir: "./",
       directory: false,
