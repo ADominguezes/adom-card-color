@@ -3,14 +3,6 @@
 <link rel="import" href="adom-card-color-styles.html">
 
 <!--
-`adom-card-color`
-
-__Library:__ Polymer 1.x
-
-__keywords:__ card, color
-
-## Description
-
 This component shows a box with information about a component inside.
 
 The information about this component is:
@@ -24,15 +16,11 @@ The information about this component is:
 
 __Basic Example__
 
-<img src="docs/adom-card-color-basic.png" width="600px"/>
-
 ```html
 <adom-card-color heading="component-title" label='["card", "color"]' img="http://lorempixel.com/150/150" description="lorem ipsum" color="#00897b" webcomponent="polymer"></adom-card-color>
 ```
 
 __Example without footer__
-
-<img src="docs/adom-card-color-no-footer.png" width="600px"/>
 
 ```html
 <adom-card-color heading="component-title" label='["card", "color"]' img="http://lorempixel.com/150/150" description="lorem ipsum" color="#00897b" webcomponent="polymer" no-footer></adom-card-color>
@@ -40,25 +28,11 @@ __Example without footer__
 
 __Example collapsed__
 
-<img src="docs/adom-card-color-collapsed.png" width="600px"/>
-
 ```html
 <adom-card-color heading="component-title" label='["card", "color"]' img="http://lorempixel.com/150/150" description="lorem ipsum" color="#00897b" webcomponent="polymer" collapsed></adom-card-color>
 ```
 
-## Slot
-
-This component has three slot for add a customizable content:
-
-Slot | zone |
-:--- | :--- |
-card-header | header |
-card-body | body |
-card-footer | footer |
-
 __Example with slot__
-
-<img src="docs/adom-card-color-slot.png" width="600px"/>
 
 ```html
 <style is="custom-style">
@@ -80,41 +54,6 @@ __Example with slot__
   </div>
 </adom-card-color>
 ```
-
-## Methods
-
-this component hasn't got public methods.
-
-## Styling
-
-The following custom CSS properties are available for styling:
-
-Custom property | Description | Default |
-:--- | :--- | :--- |
---adom-card-color | empty mixin  | {} |
---adom-card-color-bg-color | background color for :host | #00897b |
---adom-card-color-body | empty mixin for body | {} |
---adom-card-color-body-description | empty mixin for body description | {} |
---adom-card-color-color | color for :host  | #fff |
---adom-card-color-footer | empty mixin for footer | {} |
---adom-card-color-footer-buttons | empty mixin footer buttons | {} |
---adom-card-color-footer-buttons-btn | empty mixin for footer buttons .btn | {} |
---adom-card-color-footer-buttons-btn-color | color for footer buttons .btn  | #fff |
---adom-card-color-footer-buttons-span | empty mixin for buttons span | {} |
---adom-card-color-footer-buttons-svg | empty mixin for buttons svg | {} |
---adom-card-color-footer-buttons-svg-size | size for buttons svg | 30px |
---adom-card-color-header | empty mixin for header | {} |
---adom-card-color-header-container | empty mixin for header container | {} |
---adom-card-color-header-heading | empty mixin for header heading | {} |
---adom-card-color-header-img | empty mixin for header img | {} |
---adom-card-color-header-label | empty mixin for header label | {} |
---adom-card-color-header-size | size for header | 150px |
---adom-card-color-ribbon | empty mixin for ribbon | {} |
---adom-card-color-ribbon-after | empty mixin ribbon after | {} |
---adom-card-color-ribbon-after-bg-color | background color for ribbon after | #A48505 |
---adom-card-color-ribbon-bg-color | color for ribbon | #f1c40f |
-
-@demo demo/index.html
 -->
 
 <dom-module id="adom-card-color">

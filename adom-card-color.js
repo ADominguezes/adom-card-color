@@ -13,6 +13,13 @@
         value: 'title'
       },
       /**
+       * set the resource
+       */
+      resource: {
+        type: String,
+        value: 'https://github.com'
+      },
+      /**
        * Set an array with label
        */
       label: {
@@ -41,7 +48,7 @@
        */
       color: {
         type: String,
-        value: '#fff',
+        value: '#00897b',
         observer: '_setColor'
       },
       /**
@@ -94,27 +101,45 @@
      * set Demo
      */
     _setDemo: function() {
+      /**
+       * Fired when button demo is clicked
+       * @event adom-card-color-demo
+       * @param heading
+       */
       this.dispatchEvent(new CustomEvent('adom-card-color-demo', {
         bubbles: true,
-        composed: true
+        composed: true,
+        detail: this.heading
       }));
     },
     /**
-     * set Demo
+     * set Documentation
      */
     _setDocumentation: function() {
+      /**
+       * Fired when button documentation is clicked
+       * @event adom-card-color-documentation
+       * @param heading
+       */
       this.dispatchEvent(new CustomEvent('adom-card-color-documentation', {
         bubbles: true,
-        composed: true
+        composed: true,
+        detail: this.heading
       }));
     },
     /**
-     * set Demo
+     * set Resource
      */
     _setResource: function() {
+      /**
+       * Fired when button resource is clicked
+       * @event adom-card-color-resource
+       * @param resource
+       */
       this.dispatchEvent(new CustomEvent('adom-card-color-resource', {
         bubbles: true,
-        composed: true
+        composed: true,
+        detail: this.resource
       }));
     }
   });
